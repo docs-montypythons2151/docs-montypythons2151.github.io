@@ -27,6 +27,21 @@
 				</nav>
 			</header>
 
+		<section id="sidebar">
+				<div class="inner">
+					<nav>
+						<ul>
+							<li><a href="#main">WPILIB and GitHub Desktop</a></li>
+							<li><a href="#main2">Opening the Repository in WPILIB</a></li>
+							<li><a href="#main3">Building and Deploying Code</a></li>
+							<li><a href="#main4">Comitting Your Changes To The GitHub Repository</a></li>
+							<li><a href="#main5">Creating and Managing Branches</a></li>
+							<li><a href="#main6">Basics of Coding in WPILIB</a></li>
+						</ul>
+					</nav>
+				</div>
+			</section>
+
 		<!-- Wrapper -->
 			<div id="wrapper">
 
@@ -46,27 +61,27 @@
 							</div>					
 						</div>
 					</section>
-					<section id="main" class="wrapper">
+					<section id="main2" class="wrapper">
 						<div class="inner">
 							<h1 class="major">Opening the Repository in WPILIB</h1>
 							<p>To open the repository in WPILIB all you have to do is press "Show in Explorer" in GitHub Desktop, copy the file path that opens, then open WPILIB, press "File", "Open Folder", then paste the path into File Explorer and press "Select Folder".</p>
 						</div>
 					</section>
-					<section id="main" class="wrapper">
+					<section id="main3" class="wrapper">
 						<div class="inner">
 							<h1 class="major">Building and Deploying Code</h1>
 							<p>Once you have the project opened in WPILIB you can build and deploy the code onto the robot. Make sure you're connected to the robot before you deploy.</p>
 							<p>Press the three dots in the top right corner then press "Build Robot Code", wait for it to finish, and press "Deploy Robot Code".</p>
 						</div>
 					</section>
-					<section id="main" class="wrapper">
+					<section id="main4" class="wrapper">
 						<div class="inner">
 							<h1 class="major">Comitting Your Changes To The GitHub Repository</h1>
 							<p>Once you change any code or files in WPILIB you can save the changes by pressing "File" then press "Save All". If you want to just save one file you can press Ctrl+S while having the file open in WPILIB.</p>
 							<p>After you save, open GitHub Desktop and you should see the changes made. If you don't refer to previous steps for troubleshooting. Add a summary of what you changed then press commit and push to origin.</p>
 						</div>
 					</section>
-					<section id="main" class="wrapper">
+					<section id="main5" class="wrapper">
 						<div class="inner">
 							<h1 class="major">Creating and Managing Branches</h1>
 							<p>You can create branches within repositories by pressing "New branch" under "Current branch" choose a Name based off what you need to create the branch for and press "Create branch". If it says to "Preview Pull Request" press that button and follow the steps mentioned.</p>
@@ -77,6 +92,34 @@
 								</div>
 							</div>
 							<p>To commit your changes to a branch just follow the previous steps mentioned for commiting changes.</p>
+						</div>
+					</section>
+					<section id="main6" class="wrapper">
+						<div class="inner">
+							<h1 class="major">Basics of Coding in WPILIB</h1>
+							<p>If you don't already know how to code in Java then I highly recommend using <a href="https://www.w3schools.com/java/default.asp">W3Schools</a> for learning Java.</p>
+							<p>To access the main part of the folder that you'll be using press "src/main" then "java/frc/robot".</p>
+							<div class="box alt">
+								<div class="row gtr-uniform">
+									<div class="col-2.5"><span class="image fit"><img src="images/src main.png" alt="" /></span></div>
+								</div>
+							</div>
+							<h3>Main.java</h3>
+							<p>This is where all code is initialized. You're most likely never going to edit anything in this file but it's a good start to see how everything works. Most questions should be answered by the comments.</p>
+							<div class="box alt">
+								<div class="row gtr-uniform">
+									<div class="col-6"><span class="image fit"><img src="images/yes the question.png" alt="" /></span></div>
+								</div>
+							</div>
+							<h3>RobotContainer.java</h3>
+							<p>One of the most important files here. This is where all subsystems, commands, and everything else in between is initialized and called. The <a href="https://docs.wpilib.org/en/stable/docs/software/basic-programming/joystick.html#">controller</a> is also added here.</p>
+							<div class="box alt">
+								<div class="row gtr-uniform">
+									<div class="col-6"><span class="image fit"><img src="images/robot container initialize.png" alt="" /></span></div>
+								</div>
+							</div>
+							<h3>Robot.java</h3>
+							<p> </p>
 						</div>
 					</section>
 			</div>

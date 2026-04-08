@@ -65,6 +65,14 @@
 						<div class="inner">
 							<h1 class="major">Opening the Repository in WPILIB</h1>
 							<p>To open the repository in WPILIB all you have to do is press "Show in Explorer" in GitHub Desktop, copy the file path that opens, then open WPILIB, press "File", "Open Folder", then paste the path into File Explorer and press "Select Folder".</p>
+							<div class="box alt">
+								<div class="row gtr-uniform">
+									<div class="col-6"><span class="image fit"><img src="images/show in explorer.png" alt="" /></span></div>
+									<div class="col-6"><span class="image fit"><img src="images/copy path in file explorer.png" alt="" /></span></div>
+									<div class="col-4"><span class="image fit"><img src="images/press open folder.png" alt="" /></span></div>
+									<div class="col-8"><span class="image fit"><img src="images/paste path and press select folder.png" alt="" /></span></div>
+								</div>
+							</div>
 						</div>
 					</section>
 					<section id="main3" class="wrapper">
@@ -72,6 +80,11 @@
 							<h1 class="major">Building and Deploying Code</h1>
 							<p>Once you have the project opened in WPILIB you can build and deploy the code onto the robot. Make sure you're connected to the robot before you deploy.</p>
 							<p>Press the three dots in the top right corner then press "Build Robot Code", wait for it to finish, and press "Deploy Robot Code".</p>
+							<div class="box alt">
+								<div class="row gtr-uniform">
+									<div class="col-5"><span class="image fit"><img src="images/buidl a.png" alt="" /></span></div>
+								</div>
+							</div>
 						</div>
 					</section>
 					<section id="main4" class="wrapper">
@@ -108,18 +121,30 @@
 							<p>This is where all code is initialized. You're most likely never going to edit anything in this file but it's a good start to see how everything works. Most questions should be answered by the comments.</p>
 							<div class="box alt">
 								<div class="row gtr-uniform">
-									<div class="col-6"><span class="image fit"><img src="images/yes the question.png" alt="" /></span></div>
+									<div class="col-8"><span class="image fit"><img src="images/yes the question.png" alt="" /></span></div>
 								</div>
 							</div>
 							<h3>RobotContainer.java</h3>
 							<p>One of the most important files here. This is where all subsystems, commands, and everything else in between is initialized and called. The <a href="https://docs.wpilib.org/en/stable/docs/software/basic-programming/joystick.html#">controller</a> is also added here.</p>
 							<div class="box alt">
 								<div class="row gtr-uniform">
-									<div class="col-6"><span class="image fit"><img src="images/robot container initialize.png" alt="" /></span></div>
+									<div class="col-9"><span class="image fit"><img src="images/robot container initialize.png" alt="" /></span></div>
 								</div>
 							</div>
 							<h3>Robot.java</h3>
-							<p> </p>
+							<p>Just like Main.java you're most likely not gonna touch this file much but still very important to understand. In this file, "Init" will stand for initialize and "Periodic" means whatever is in the method is called every 1/100 of a second. The rest of it should be pretty self-explanatory. Comments will most likely answer most of your questions.</p>
+							<div class="box alt">
+								<div class="row gtr-uniform">
+									<div class="col-8"><span class="image fit"><img src="images/robot.java.png" alt="" /></span></div>
+								</div>
+							</div>
+							<h3>Constants.java</h3>
+							<p>As the name implies, this file is for settings all of your constants for various systems that you'll be creating.</p>
+							<div class="box alt">
+								<div class="row gtr-uniform">
+									<div class="col-10"><span class="image fit"><img src="images/constants.png" alt="" /></span></div>
+								</div>
+							</div>
 						</div>
 					</section>
 			</div>

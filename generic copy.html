@@ -34,22 +34,68 @@
 					<nav>
 						<ul>
 							<li><a href="#main">Making Subsystems</a></li>
-							<li><a href="#main2">Creating Commands within Subsystems</a></li>
+							<li><a href="#main2">Initializing the Subsystem</a></li>
+							<li><a href="#main3">Creating Commands</a></li>
 						</ul>
 					</nav>
 				</div>
 			</section>
 
 		<!-- Wrapper -->
-			<div id="wrapper">
+			<div id="wrapper"> 
 				<!-- Main -->
 <!-- what is a website??!!?!?!??!?!?!?!??!?!!??!?!?!?!?!? *GASP*-->
  <!--arigato gozaimasu...!-->
 					<section id="main" class="wrapper">
-						<section id="main" class="wrapper">
 						<div class="inner">
-							<h1 class="major">Work in Progress</h1>
+							<h1 class="major">Making Subsystems</h1>
+							<p>To create a subsystem, right-click on the subsystem folder, then click "New File" and give the file an appropriate name for the subsystem being made and add ".java" at the end. Once the file is made, add "package frc.robot.subsystems;", "import edu.wpi.first.wpilibj2.command.SubsystemBase;", and "public class 'name' extends SubsystemBase {}", all code must be inside the brackets.</p>
+							<div class="box alt">
+								<div class="row gtr-uniform">
+									<div class="col-3"><span class="image fit"><img src="images/Subsystem_New_File.png" alt="" /></span></div>
+									<div class="col-3"><span class="image fit"><img src="images/Subsystem_Name_File.png" alt="" /></span></div>
+									<div class="col-6"><span class="image fit"><img src="images/subsystem creatinon.png" alt="" /></span></div>
+								</div>
+							</div>
+						</div> <!-- aare we locked in? -->
 					</section>
+					<section id="main2" class="wrapper">
+						<div class="inner">
+							<h1 class="major">Instantiating the Subsystem</h1>
+							<p>After making the subsystem and adding all of your variables you're going to want to initizalize you're subsystem. To do this, all you have to do is add public 'name'() {}. This is where everything will be called when the robot starts for this subsystem. If you have any motors you would want to stop them here.</p>
+							<div class="box alt">
+							<div class="row gtr-uniform">
+								<div class="col-6"><span class="image fit"><img src="images/wider susbsystems.png" alt="" /></span></div>
+							</div>
+						</div>
+						</div>
+					</section>
+					<section id="main3" class="wrapper">
+						<div class="inner">
+							<h1 class="major">Creating Commands</h1>
+							<p>Creating commands within subsystems is fairly simple. First create a method and add the code you want to run inside the method. Next add the command outside of the method.</p>
+							<div class="box alt">
+								<div class="row gtr-uniform">
+									<div class="col-8"><span class="image fit"><img src="images/subsystem command file method.png" alt="" /></span></div>
+								</div>
+							</div>
+						</div>
+					</section>
+					<section id="main4" class="wrapper">
+						<div class="inner">
+							<h1 class="major">Running Commands in the Subsystem</h1>
+							<p>Everything here is going to be done in RobotContainer.java. To actually run the commands you made within your subsystem first you need to import your subsystem into RobotContainer.java, at the beggining of RobotContainer.java add import.frc.subsystems.'name';. After that you have to initialize you're subsystem. Add private final 'name of subsystem' 'name of variable' = new 'name of initializing method'();. From there you can make the commands and call them however you want to. Add private final Command 'name of command' = 'name of subsystem'.'name of command'();</p>
+							<div class="box alt">
+								<div class="row gtr-uniform">
+									<div class="col-6"><span class="image fit"><img src="images/importation.png" alt="" /></span></div>
+									<div class="col-6"><span class="image fit"><img src="images/subsystem creatinon.png" alt="" /></span></div>
+									<div class="col-12"><span class="image fit"><img src="images/adding command to subsystem.png" alt="" /></span></div>
+								</div>
+								</div>
+							</div>
+							
+							</div>
+						</div>
 					</section>
 		<!-- Footer -->
 			

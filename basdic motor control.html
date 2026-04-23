@@ -36,7 +36,51 @@
  <!--arigato gozaimasu...!-->
 					<section id="main" class="wrapper">
 						<div class="inner">
-							<h1 class="major">Work in Progress</h1>
+							<h1 class="major">Setting Up Your Motors in WPILIB</h1>
+							<h3>TalonFX Motors</h3>
+							<p>When using TalonFX Motors to initialize the motor and set the id you'll use "private final TalonFX "name" = new TalonFX("id of motor");".</p>
+							<pre><code>private final TalonFX TalonFXMotor = new TalonFX(1);
+</code></pre>
+							<h3>TalonFXS Motors</h3>
+							<p>Very similar to how you setup the TalonFX Motors except you add TalonFXS instead of TalonFX.</p>
+							<pre><code>private final TalonFXS TalonFXSMotor = new TalonFXS(1);
+</code></pre>
+							<h3>Configurations for TalonFX Motors</h3>
+							<p>Often abbreviated as "configs" all these do is pass configurations to the motors. Most often case use are current limits. To make a configuration for TalonFX motors just use "private final TalonFXConfiguration "name" = new TalonFXConfiguration();".</p>
+							<pre><code>private final TalonFXConfiguration TalonFXConfig = new TalonFXConfiguration();
+</code></pre>
+							<h3>Configurations for TalonFXS Motors</h3>
+							<p>Again very similar to how you setup configs for TalonFX Motors you just use TalonFXS instead of TalonFX.</p>
+							<pre><code>private final TalonFXSConfiguration TalonFXSConfig = new TalonFXSConfiguration();
+</code></pre>
+							<h3>Applying Current Limits to TalonFX Configurations</h3>
+							<p>You ALWAYS want a current limit on whatever motor you're using. To apply one all you have to add is ""Name of TalonFX Configuration".withSupplyCurrentLimit(40);". For most uses a current limit of 40 is good for a TalonFX motor but if you're not sure ask someone.</p>
+							<pre><code>TalonFXConfig.withSupplyCurrentLimit(40);
+</code></pre>
+							<h3>Applying Current Limits to TalonFXS Configurations</h3>
+							<p>Nothing changes in the code just use the TalonFXS config you made and not the TalonFX one. Since you'll mostly be using minions for TalonFXS configurations a good current limit is 15.</p>
+							<pre><code>TalonFXSConfig.withSupplyCurrentLimit(15);
+</code></pre>
+							<h3>Applying TalonFX Motor Configs to TalonFX Motors</h3>
+							<p>To apply your configs to your TalonFX Motors just use ""name of motor".getConfigurator().apply("name of talonfx config");"</p>
+							<pre><code>TalonFXMotor.getConfigurator().apply(TalonFXConfig);
+</code></pre>
+							<h3>Applying TalonFXS Motor Configs to TalonFXS Motors</h3>
+							<p>Same thing as TalonFX motors just use your TalonFXS configs and motors</p>
+							<pre><code>TalonFXSMotor.getConfigurator().apply(TalonFXSConfig);
+</code></pre>
+					</section>
+					<section id="main" class="wrapper">
+						<div class="inner">
+							<h1 class="major">Running Your Motors in WPILIB</h1>
+							<p>Running your motors like this should only be used for testing purposes and NEVER for actual competition unless you absolutely have to as the RPM your motor is spinning at will be inconsistent.</p>
+							<p>To run your motor all you have to do is add ""name of motor".set("speed of motor in percentage of max speed from 0-1");" to a command and call that command.</p>
+							<pre><code>TalonFXMotor.set(0.5);
+//0.5 will be 50% of the max speed of the motor
+TalonFXMotor2.set(-0.5);
+//Will run at 50% of max speed in reverse
+</code></pre>
+						</div>
 					</section>
 		<!-- Scripts -->
 			<script src="assets/js/jquery.min.js"></script>
